@@ -22,7 +22,7 @@ jobs:
 
       # Build Docker image
       - name: Build Docker image
-        run: docker build . --file Dockerfile --tag ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_REPO }}:$GITHUB_SHA
+        run: docker build . --tag ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_REPO }}:$GITHUB_SHA
 
       # Login to DockerHub
       - name: Login to DockerHub
