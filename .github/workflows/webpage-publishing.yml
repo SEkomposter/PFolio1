@@ -26,7 +26,7 @@ jobs:
 
       # Login to DockerHub
       - name: Login to DockerHub
-        run: echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login --username "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin docker.io
+        run: echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login --username "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin docker.io
         
       # Login to Container to DockerHub
       - name: Push to DockerHub
