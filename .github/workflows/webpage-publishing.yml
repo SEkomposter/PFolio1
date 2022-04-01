@@ -30,4 +30,4 @@ jobs:
         
       # Login to Container to DockerHub
       - name: Push to DockerHub
-        run: docker push {{ secrets.DOCKER_HUB_USERNAME }}/{{ secrets.DOCKER_HUB_REPO }}:$GITHUB_SHA
+        run: docker push ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_REPO }}:$GITHUB_SHA
